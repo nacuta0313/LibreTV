@@ -1,0 +1,18 @@
+{
+  "name": "LibreTV 云端精简源",
+  "version": 2,
+  "sources": [
+    { "name": "爱奇艺资源", "url": "https://iqiyizyapi.com/api.php/provide/vod", "detail": "https://iqiyizyapi.com", "isAdult": false },
+    { "name": "非凡资源", "url": "https://api.ffzyapi.com/api.php/provide/vod", "detail": "https://cj.ffzyapi.com", "isAdult": false },
+    { "name": "最大资源", "url": "https://api.zuidapi.com/api.php/provide/vod", "detail": "https://zuida.xyz", "isAdult": false },
+    { "name": "猫眼资源", "url": "https://api.maoyanapi.top/api.php/provide/vod", "detail": "https://www.maoyanzy.com", "isAdult": false },
+    { "name": "极速资源", "url": "https://jszyapi.com/api.php/provide/vod", "detail": "https://jszyapi.com", "isAdult": false },
+    { "name": "暴风资源", "url": "https://bfzyapi.com/api.php/provide/vod", "detail": "https://bfzy.tv", "isAdult": false },
+    { "name": "360资源", "url": "https://360zy.com/api.php/provide/vod", "detail": "https://360zy.com", "isAdult": false },
+    { "name": "虎牙资源", "url": "https://www.huyaapi.com/api.php/provide/vod", "detail": "https://www.huyaapi.com", "isAdult": false }
+  ],
+  "liveSources": [
+    { "name": "国内电视 · IPTV-org", "url": "https://iptv-org.github.io/iptv/countries/cn.m3u" },
+    { "name": "港澳台及海外 · YueChan", "url": "https://raw.githubusercontent.com/YueChan/Live/main/GNTV.m3u" }
+  ]
+}

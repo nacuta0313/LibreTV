@@ -206,7 +206,10 @@ export async function POST(req: Request) {
   if (!Array.isArray(body.sources) || body.sources.length === 0) {
     return NextResponse.json({ error: '请至少选择一个点播源' }, { status: 400 });
   }
-  const sources = body.sources.slice(0, 50);
+  // Cloudflare Workers 单次调用最多 50 个上游子请求（subrequests）；
+  // 每源最多抓 SEARCH_MAX_PAGES 页，8 源 × 5 页 = 40 个请求，预留安全余量。
+  // 超出部分按列表顺序截断（聚合搜索取前 8 个源已足够覆盖主流影视内容）。
+  const sources = body.sources.slice(0, 8);
   const filterAdult = body.filterAdult !== false;
 
   const cacheKey = searchCacheKey(wd, sources, filterAdult);
